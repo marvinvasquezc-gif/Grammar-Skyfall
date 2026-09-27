@@ -1,0 +1,38 @@
+GRAMMAR SKYFALL — V20 FIXES
+
+This package fixes the multiplayer issues reported during testing:
+
+1. ROUND / ELIMINATION FLOW
+- After player 3, 4, 5, or 6 finishes their turn, the round now enters the elimination mini-game reliably.
+- The elimination mini-game advances automatically after all connected players answer or time out.
+- One unique lowest mini-score is eliminated; a tie for lowest is DRAW and nobody is eliminated.
+- The flow repeats for 6 -> 5 -> 4 -> 3 -> 2 survivors.
+- With 2 survivors, the Muerte Súbita vote starts as designed.
+- Stale mini-game timers are blocked from advancing a newer question.
+
+2. TURN OWNERSHIP
+- In ONLINE mode, each player can interact only with their own turn.
+- The host can no longer answer another player's Farm challenge.
+- The host can no longer type in another player's Skyfall lane.
+- READY / VOTE / MINI / FARM / SKYFALL network messages are checked against the player's real connection identity.
+- A remote player cannot submit a turn for a different player by changing the client-side player id.
+
+3. SKYFALL HINTS
+- Hints now show a base-form clue instead of the answer's third-person form.
+- Example: HE ___ THE MOVIES. (love) when the required answer is LOVES.
+- Common irregular forms such as HAS -> have, DOES -> do, and GOES -> go are normalized.
+
+4. MUSIC
+- MUSIC ON/OFF remains available throughout the normal game UI, including the home screen and while challenge overlays are visible.
+- The selected music continues to follow the current phase: menu, gameplay, Skyfall, or victory.
+
+5. ONLINE TRANSPORT
+- The game uses the central WebSocket relay server included in /server.
+- PeerJS is no longer loaded by the page.
+
+RENDER (CURRENT GITHUB STRUCTURE)
+- Root Directory: grammar skyfall
+- Build Command: npm install --prefix server
+- Start Command: node server/server.js
+
+After updating the GitHub repository, use Render -> Manual Deploy -> Deploy latest commit.
