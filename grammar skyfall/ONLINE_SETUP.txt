@@ -1,0 +1,25 @@
+GRAMMAR SKYFALL — V19 ONLINE SERVER
+
+This build uses a CENTRAL WebSocket multiplayer server. Netlify is optional for this version.
+
+RECOMMENDED (one URL for everyone):
+1) Use a Node.js host such as Render, Railway, Fly.io, or another Node/WebSocket service.
+2) Upload/deploy this whole folder.
+3) Run:
+   npm install
+   npm start
+4) Share the public HTTPS URL with every player.
+5) Host chooses CREATE ONLINE.
+6) Friends choose JOIN WITH CODE and enter the 6-character room code.
+
+The browser automatically uses the same origin WebSocket endpoint:
+   https://YOUR-DOMAIN/ws  ->  wss://YOUR-DOMAIN/ws
+
+Health check:
+   https://YOUR-DOMAIN/health
+It should return JSON with {"ok":true,...}.
+
+NETLIFY:
+Netlify can still host a static copy of the site, but Netlify itself does not run this WebSocket process. If the static site is on Netlify, set a relay URL in js/config.js (see example) to your separate server, e.g.:
+   window.PSR_CONFIG={ relayUrl:'wss://your-server.example.com/ws' };
+Then deploy that config with the site.
