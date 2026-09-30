@@ -1,7 +1,0 @@
-GRAMMAR SKYFALL v23
-
-1. Skyfall READY flow hardened for local and online 2-player finals.
-2. Added explicit pending READY feedback and synchronized launch guard.
-3. Roulette result visibility extended with a large center-screen number.
-4. Main answer/result feedback durations increased.
-5. SOLO QUEST SPEED CHECK moved to separate DEL PINO CHALLENGE mode.
