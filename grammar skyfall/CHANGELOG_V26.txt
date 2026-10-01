@@ -1,0 +1,12 @@
+GRAMMAR SKYFALL V26 — SERIOUS MUSIC CONTROL
+
+Music control was rebuilt instead of using a visual-only status label.
+
+1. Added a polished dark/glass MUSIC ON / MUSIC OFF control fixed on the upper-right.
+2. The control now actually starts/stops the HTMLAudioElement used for background music.
+3. Music preference is saved in localStorage and survives page reloads.
+4. Turning MUSIC OFF does NOT mute sound effects.
+5. Turning MUSIC ON retries the current mode's music immediately.
+6. Solo Quest keeps SOLO music; DEL PINO CHALLENGE keeps DEL PINO music.
+7. The control is available across the app after the game has started, including Solo Quest.
+8. The control is keyboard/touch friendly and exposes an accessible pressed state.

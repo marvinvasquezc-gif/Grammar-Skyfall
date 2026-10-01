@@ -1,0 +1,22 @@
+GRAMMAR SKYFALL V26 — MUSIC TOGGLE CHECK
+
+Static checks completed:
+- js/audio.js: valid JavaScript syntax.
+- js/game.js: valid JavaScript syntax.
+- js/solo.js: valid JavaScript syntax.
+- js/online.js: valid JavaScript syntax.
+- index.html contains exactly one #musicToggle control.
+- All six music files are present under assets/music/:
+  menu.mp3
+  gameplay.mp3
+  skyfall.mp3
+  victory.mp3
+  solo.mp3
+  delpino.mp3
+
+Behavior implemented:
+- MUSIC OFF calls stopMusic() and clears the active HTMLAudioElement.
+- MUSIC ON calls playMusic() for the current mode.
+- SFX uses a separate sfxEnabled flag, so music muting cannot silence effects.
+- User preference persists via localStorage key gs_music_enabled_v1.
+- The toggle is fixed to the upper-right and styled as a dark glass control.
