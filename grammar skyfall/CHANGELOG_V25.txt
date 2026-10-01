@@ -1,0 +1,8 @@
+GRAMMAR SKYFALL V25 — MUSIC TOGGLE HOTFIX
+
+- Added persistent MUSIC ON/OFF control visible across the app, including Solo Quest and DEL PINO CHALLENGE.
+- Turning music off stops background tracks immediately.
+- Turning music back on resumes the current requested mode track.
+- Music preference persists in localStorage across reloads.
+- Music OFF does NOT mute sound effects; roulette, correct/wrong, countdown and other SFX still play.
+- Existing menu/gameplay/skyfall/victory/solo/delpino tracks are preserved.
