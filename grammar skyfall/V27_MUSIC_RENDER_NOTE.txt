@@ -1,0 +1,11 @@
+V27 RENDER NOTE
+
+This ZIP is based on the project ZIP currently supplied for the GitHub repository.
+
+The music control is now styled twice:
+1. external css/styles.css
+2. inline critical style in index.html
+
+This means an old/missing styles.css can no longer make the music button fall back to the browser's plain white Arial button.
+
+After uploading the project files to GitHub, commit them and redeploy the Render service. A hard refresh may be needed once because the previous deployment may have been cached.

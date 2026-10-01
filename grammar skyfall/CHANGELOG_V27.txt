@@ -1,0 +1,10 @@
+GRAMMAR SKYFALL V27 — MUSIC TOGGLE FINAL FIX
+
+• Rebuilt MUSIC ON/OFF as a real control rather than a visual status label.
+• Added inline critical CSS in index.html so the control remains styled even when the external stylesheet is stale or misses cache.
+• Added cache-busting query `?v=27` to CSS and game scripts.
+• MUSIC OFF immediately pauses/resets the background HTMLAudioElement.
+• MUSIC ON resumes the current mode's music.
+• Music state persists in localStorage.
+• Sound effects are independent from the music toggle.
+• The control is fixed in the upper-right with dark/glass styling and press states.
