@@ -1,9 +1,0 @@
-V25 MUSIC TEST REPORT
-
-Checked statically:
-1. MUSIC toggle is mounted outside the game screen, so it remains usable on home, online, local test, Solo Quest and DEL PINO CHALLENGE screens.
-2. Toggle stores its state in localStorage key psrMusicEnabled.
-3. OFF calls stopMusic() and prevents future background playback.
-4. ON resumes the last requested music track.
-5. Sound effects no longer depend on the music flag, so turning MUSIC OFF does not disable roulette/correct/wrong/countdown SFX.
-6. Existing music file slots remain: menu.mp3, gameplay.mp3, skyfall.mp3, victory.mp3, solo.mp3, delpino.mp3.
